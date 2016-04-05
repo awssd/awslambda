@@ -101,24 +101,21 @@
 </ol>
 
 <h2>
-<a id="starter-code" class="anchor" href="#starter-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Starter Code</h2>
+<a id="code" class="anchor" href="#code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code</h2>
 
 <h3>
-<a id="skeleton-code" class="anchor" href="#skeleton-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skeleton code</h3>
+<a id="starter-code" class="anchor" href="#starter-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Starter code</h3>
 
 <div class="highlight highlight-source-python"><pre><span class="pl-c"># lambda_fuction.py</span>
 <span class="pl-k">import</span> boto3
 <span class="pl-k">import</span> json
 
 
-<span class="pl-k">with</span> <span class="pl-c1">open</span>(<span class="pl-s"><span class="pl-pds">'</span>./config.json<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>r<span class="pl-pds">'</span></span>) <span class="pl-k">as</span> <span class="pl-v">file</span>:
-    config <span class="pl-k">=</span> json.loads(<span class="pl-v">file</span>.read())
-
 <span class="pl-c"># get API keys</span>
-<span class="pl-c1">CONSUMER_KEY</span> <span class="pl-k">=</span> config[<span class="pl-s"><span class="pl-pds">'</span>consumer-key<span class="pl-pds">'</span></span>]
-<span class="pl-c1">CONSUMER_SECRET</span> <span class="pl-k">=</span> config[<span class="pl-s"><span class="pl-pds">'</span>consumer-secret<span class="pl-pds">'</span></span>]
-<span class="pl-c1">ACCESS_TOKEN</span> <span class="pl-k">=</span> config[<span class="pl-s"><span class="pl-pds">'</span>access-token<span class="pl-pds">'</span></span>]
-<span class="pl-c1">ACCESS_TOKEN_SECRET</span> <span class="pl-k">=</span> config[<span class="pl-s"><span class="pl-pds">'</span>access-token-secret<span class="pl-pds">'</span></span>]
+<span class="pl-c1">CONSUMER_KEY</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span> 
+<span class="pl-c1">CONSUMER_SECRET</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span> 
+<span class="pl-c1">ACCESS_TOKEN</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+<span class="pl-c1">ACCESS_TOKEN_SECRET</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
 
 
 <span class="pl-k">def</span> <span class="pl-en">lambda_handler</span>(<span class="pl-smi">event</span>, <span class="pl-smi">context</span>):
@@ -136,18 +133,6 @@
     <span class="pl-c"># Submit image or metadata to Twitter (Basic)</span>
 
     <span class="pl-c"># Submit image to third party services (Advanced)</span></pre></div>
-
-<h3>
-<a id="configuration-file" class="anchor" href="#configuration-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration file</h3>
-
-<p><code>config.json</code></p>
-
-<div class="highlight highlight-source-json"><pre>{
-    <span class="pl-s"><span class="pl-pds">"</span>consumer-key<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-    <span class="pl-s"><span class="pl-pds">"</span>consumer-secret<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-    <span class="pl-s"><span class="pl-pds">"</span>access-token<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
-    <span class="pl-s"><span class="pl-pds">"</span>access-token-secret<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
-}</pre></div>
 
 <h3>
 <a id="test-payload" class="anchor" href="#test-payload" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test payload</h3>
